@@ -9,6 +9,8 @@ import { Plant } from 'src/app/models/plant.model';
 })
 export class PlantsListComponent implements OnInit {
   plants: Plant[] = [];
+  TotalExteriorPlants = 0;
+  TotalInteriorPlants = 0;
 
   constructor(private planService: PlantRequestService) {}
 
@@ -16,6 +18,14 @@ export class PlantsListComponent implements OnInit {
     this.planService.getPants().subscribe(
       (data) => {
         this.plants = data;
+        if (data && data.length) {
+          this.TotalExteriorPlants = data.filter(
+            (plant) => plant.tipo === 'Exterior'
+          ).length;
+          this.TotalInteriorPlants = data.filter(
+            (plant) => plant.tipo === 'Interior'
+          ).length;
+        }
       },
       (error) => {
         console.log('error: ', error);

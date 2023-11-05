@@ -1,6 +1,7 @@
 .content {
-  padding: 30px 120px;
-  .banner-img {
-    // width: 50rem;
-  }
+  padding: 20px 90px;
+}
+.banner-img {
+  max-height: 300px;
+  object-fit: cover;
 }

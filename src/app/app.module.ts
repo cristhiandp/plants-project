@@ -6,10 +6,17 @@ import { AppComponent } from './app.component';
 import { PlantRequestService } from './core/plant-request.service';
 import { PlantModule } from './plant/plant.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, PlantModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    SharedModule,
+    PlantModule,
+  ],
   providers: [PlantRequestService],
   bootstrap: [AppComponent],
 })

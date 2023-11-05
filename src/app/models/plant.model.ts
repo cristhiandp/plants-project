@@ -2,7 +2,7 @@ export class Plant {
   id!: number;
   nombre_comun!: string;
   nombre_cientifico!: string;
-  tipo!: string;
+  tipo!: 'Exterior' | 'Interior';
   altura_maxima!: number;
   clima!: string;
   sustrato_siembra!: string;
@@ -11,7 +11,7 @@ export class Plant {
     id: number,
     nombre_comun: string,
     nombre_cientifico: string,
-    tipo: string,
+    tipo: 'Exterior' | 'Interior',
     altura_maxima: number,
     clima: string,
     sustrato_siembra: string

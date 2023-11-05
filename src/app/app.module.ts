@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlantRequestService } from './core/plant-request.service';
 import { PlantModule } from './plant/plant.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PlantModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, PlantModule],
   providers: [PlantRequestService],
   bootstrap: [AppComponent],
 })
